@@ -1,11 +1,19 @@
 import React, {Component} from 'react';
-import {Text, StyleSheet, View, Image, TextInput} from 'react-native';
+import {
+  Text,
+  StyleSheet,
+  View,
+  Image,
+  TextInput,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
 
 export default class App extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <View style={{flex: 1, backgroundColor: 'white'}}>
+        <ScrollView style={{flex: 1, backgroundColor: 'white'}}>
           {/* search bar */}
           <View
             style={{
@@ -142,7 +150,6 @@ export default class App extends Component {
           <View
             style={{
               marginHorizontal: 17,
-              flexDirection: 'row',
               flexWrap: 'wrap',
               marginTop: 18,
             }}>
@@ -282,7 +289,7 @@ export default class App extends Component {
                 justifyContent: 'space-between',
                 flexDirection: 'row',
                 width: '100%',
-                height: 18,
+                marginBottom: 18,
               }}>
               <View>
                 <View
@@ -380,7 +387,6 @@ export default class App extends Component {
                   style={{
                     width: 58,
                     height: 58,
-
                     borderWidth: 1,
                     borderColor: '#efefef',
                     borderRadius: 18,
@@ -408,7 +414,214 @@ export default class App extends Component {
               </View>
             </View>
           </View>
-        </View>
+          <View
+            style={{
+              height: 17,
+              marginTop: 20,
+              backgroundColor: '#f2f2f4',
+            }}></View>
+
+          {/* news */}
+          <View
+            style={{
+              paddingTop: 10,
+              borderBottomWidth: 1,
+              borderColor: '#e8e9ed',
+              marginHorizontal: 16,
+              paddingVertical: 10,
+            }}>
+            <View style={{position: 'relative'}}>
+              <Image
+                source={require('./dummy/sepak-bola.jpg')}
+                style={{height: 170, width: '100%', borderRadius: 8}}
+              />
+              <View
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  backgroundColor: 'black',
+                  opacity: 0.2,
+                  borderRadius: 6,
+                }}></View>
+              <Image
+                source={require('./logo/white.png')}
+                style={{
+                  height: 18,
+                  width: 60,
+                  position: 'absolute',
+                  top: 16,
+                  left: 16,
+                }}
+              />
+            </View>
+            <View>
+              <Text style={{fontWeight: 'bold', fontSize: 17, marginTop: 6}}>
+                Go News
+              </Text>
+              <Text style={{fontSize: 15}}>
+                Irvan bachdim latihan dengan Timnas di Jakarta bersama Evan
+                Dimas, dkk
+              </Text>
+            </View>
+            <View
+              style={{
+                marginTop: 10,
+                marginRight: 10,
+              }}>
+              <TouchableOpacity
+                style={{
+                  alignItems: 'flex-end',
+                }}>
+                <Text
+                  style={{
+                    backgroundColor: 'green',
+                    color: 'white',
+                    padding: 7,
+                    borderRadius: 6,
+                  }}>
+                  Read
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+
+          {/* gofoodbanner */}
+          <View
+            style={{
+              paddingTop: 10,
+              borderBottomWidth: 1,
+              borderColor: '#e8e9ed',
+              marginHorizontal: 16,
+              paddingVertical: 10,
+            }}>
+            <View style={{position: 'relative'}}>
+              <Image
+                source={require('./dummy/food-banner.jpg')}
+                style={{
+                  height: 170,
+                  width: '100%',
+                  borderRadius: 8,
+                }}
+              />
+              <View
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  backgroundColor: 'black',
+                  opacity: 0.2,
+                  borderRadius: 6,
+                }}></View>
+              <Image
+                source={require('./logo/go-food.png')}
+                style={{
+                  height: 18,
+                  width: 80,
+                  position: 'absolute',
+                  top: 16,
+                  left: 16,
+                }}
+              />
+              <View
+                style={{
+                  position: 'absolute',
+                  bottom: 0,
+                  left: 0,
+                  width: '100%',
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  paddingBottom: 16,
+                }}>
+                <View style={{paddingHorizontal: 16}}>
+                  <Text
+                    style={{
+                      fontSize: 16,
+                      fontWeight: 'bold',
+                      color: 'white',
+                      marginBottom: 8,
+                    }}>
+                    Free GO-FOOD Voucher
+                  </Text>
+                  <Text style={{fontSize: 11, color: 'white'}}>
+                    Quick, before they run!
+                  </Text>
+                </View>
+                <View style={{flex: 1, paddingLeft: 12}}>
+                  <TouchableOpacity
+                    style={{
+                      backgroundColor: 'green',
+                      borderRadius: 6,
+                      padding: 10,
+                      alignSelf: 'stretch',
+                    }}>
+                    <Text style={{color: 'white'}}>Get Voucher</Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+            </View>
+          </View>
+          {/* connect with fb */}
+          <View
+            style={{
+              paddingVertical: 20,
+              borderBottomWidth: 1,
+              borderColor: '#e8e9ed',
+              marginHorizontal: 16,
+              paddingVertical: 10,
+            }}>
+            <View>
+              <Image
+                source={require('./logo/gojek.png')}
+                style={{
+                  height: 18,
+                  width: 60,
+                }}
+              />
+              <Text
+                style={{
+                  fontWeight: 'bold',
+                  marginTop: 14,
+                  fontSize: 16,
+                  color: '#1c1c1c',
+                }}>
+                Complete Your Profile
+              </Text>
+              <View style={{flexDirection: 'row'}}>
+                <View style={{marginTop: 20}}>
+                  <Image source={require('./dummy/facebook-connect.png')} />
+                </View>
+                <View>
+                  <Text
+                    style={{
+                      fontSize: 15,
+                      fontWeight: 'bold',
+                      color: '#4A4A4A',
+                    }}>
+                    Connect with Facebook
+                  </Text>
+                  <Text>Login faster without verification code</Text>
+                </View>
+              </View>
+              <View style={{flex: 1, paddingLeft: 12}}>
+                <TouchableOpacity
+                  style={{
+                    backgroundColor: 'green',
+                    borderRadius: 6,
+                    padding: 10,
+                    alignSelf: 'flex-end',
+                  }}>
+                  <Text style={{color: 'white'}}>Get Voucher</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          </View>
+        </ScrollView>
+
         {/* navigation */}
         <View
           style={{height: 55, backgroundColor: 'red', flexDirection: 'row'}}>

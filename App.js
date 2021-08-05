@@ -591,11 +591,16 @@ export default class App extends Component {
                 }}>
                 Complete Your Profile
               </Text>
-              <View style={{flexDirection: 'row'}}>
-                <View style={{marginTop: 20}}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <View style={{marginTop: 20, marginRight: 16}}>
                   <Image source={require('./dummy/facebook-connect.png')} />
                 </View>
-                <View>
+                <View style={{flex: 1, width: '70%'}}>
                   <Text
                     style={{
                       fontSize: 15,
@@ -607,7 +612,7 @@ export default class App extends Component {
                   <Text>Login faster without verification code</Text>
                 </View>
               </View>
-              <View style={{flex: 1, paddingLeft: 12}}>
+              <View style={{flex: 1, paddingLeft: 12, marginBottom: 16}}>
                 <TouchableOpacity
                   style={{
                     backgroundColor: 'green',
@@ -619,6 +624,116 @@ export default class App extends Component {
                 </TouchableOpacity>
               </View>
             </View>
+          </View>
+
+          {/* scroolhorizontal */}
+          <View>
+            <View style={{marginLeft: 16, marginTop: 16}}>
+              <Image
+                source={require('./logo/go-food.png')}
+                style={{
+                  height: 15,
+                  width: 70,
+                  marginLeft: -4,
+                }}
+              />
+              <View
+                style={{
+                  flexDirection: 'row',
+                  marginTop: 12,
+                  marginBottom: 16,
+                  justifyContent: 'space-between',
+                }}>
+                <Text
+                  style={{
+                    fontWeight: 'bold',
+                    fontSize: 17,
+                    color: '#1c1c1c',
+                  }}>
+                  Nearby Restaurant
+                </Text>
+                <Text
+                  style={{
+                    color: 'green',
+                    fontSize: 15,
+                    fontWeight: 'bold',
+                    marginRight: 16,
+                  }}>
+                  See All
+                </Text>
+              </View>
+            </View>
+            <ScrollView
+              horizontal={true}
+              showsHorizontalScrollIndicator={false}>
+              <View
+                style={{
+                  marginLeft: 16,
+                  marginBottom: 20,
+                  flexDirection: 'row',
+                }}>
+                <View
+                  style={{
+                    width: 150,
+                    height: 150,
+                    marginRight: 10,
+                  }}>
+                  <Image
+                    source={require('./dummy/go-food-kfc.jpg')}
+                    style={{
+                      width: undefined,
+                      height: undefined,
+                      resizeMode: 'cover',
+                      flex: 1,
+                      borderRadius: 8,
+                    }}
+                  />
+                  <Text style={{fontSize: 15, fontWeight: '900'}}>
+                    Minang Minung
+                  </Text>
+                </View>
+                <View
+                  style={{
+                    width: 150,
+                    height: 150,
+                    marginRight: 10,
+                  }}>
+                  <Image
+                    source={require('./dummy/go-food-kfc.jpg')}
+                    style={{
+                      width: undefined,
+                      height: undefined,
+                      resizeMode: 'cover',
+                      flex: 1,
+                      borderRadius: 8,
+                    }}
+                  />
+                  <Text style={{fontSize: 15, fontWeight: '900'}}>
+                    Minang Minung
+                  </Text>
+                </View>
+                <View
+                  style={{
+                    width: 150,
+                    height: 150,
+                    marginRight: 10,
+                  }}>
+                  <Image
+                    source={require('./dummy/go-food-kfc.jpg')}
+                    style={{
+                      width: undefined,
+                      height: undefined,
+                      resizeMode: 'cover',
+                      flex: 1,
+                      borderRadius: 8,
+                    }}
+                  />
+                  <Text style={{fontSize: 15, fontWeight: '900'}}>
+                    Minang Minung
+                  </Text>
+                </View>
+              </View>
+            </ScrollView>
           </View>
         </ScrollView>
 
@@ -700,5 +815,3 @@ export default class App extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({});
